@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Formulaire</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+
+        
+        <script>
+            //fonction de vérification des mots de passe
+            function ValidationFormaulaire(){
+                let passe1 = document.getElementById("motDePasse1").value;
+                let passe2 = document.getElementById("motDePasse2").value;
+
+                if (passe1 == passe2) {
+                    alert("mots de passe conformes")
+                    return true;
+                }
+                else{
+                    alert("mots de passe non conformes");
+                    return false;
+                }
+
+                return false;
+            }
+        </script>
+    </head>
+<body>
+
+
+    <header>
+        <img src="Logo.jpg" alt="logo du site du Formulaire">
+    </header>
+
+    <main>
+        
+
+        <section>
+
+            <div class="container">
+                <h1>INSCRIPTION</h1><br>
+                <h6>Les champs marqués par des Astérix (*) sont obligatoires.</h6>
+                
+                <form action="Validation.html" onsubmit="return ValidationFormaulaire()">
+
+                    <!--widgets dedier au genre-->
+                    <fieldset class="genre">
+                        <legend><strong>Genre*</strong></legend>
+
+                        Monsieur : <input type="radio" name="genre"><br>
+                        <br>Madame : <input type="radio" name="genre" required><br>
+                        
+                    </fieldset><br>
+
+                    <br><fieldset>
+                        <legend><strong>Statut*</strong></legend>
+                        <br>Nationalité : <br>
+                        <input type="checkbox" name="Nationalité" value="Française">Française
+                        <input type="checkbox" name="Nationalité" value="UE">UE
+                        <input type="checkbox" name="Nationalité" value="Hors UE">Hors UE<br>
+
+                        <br>Statut Matrimonial : <br>
+                    
+                        <select name="Statut" id="Statut" required>
+                            <option value="">Choisir un statut</option>
+                            <option value="Célibataire">Célibataire</option>
+                            <option value="marie">Marié (e)</option>
+                            <option value="divorcé">Divorcé (e)</option>
+                            <option value="voeuf">Veu (f ou ve)</option>
+                        </select>
+                    </fieldset><br>
+
+                    <br><fieldset>
+                        <legend><strong>Identité</strong></legend>
+
+                        <label for="prenom">Prénom* :</label><br>
+                        <input id="prenom" type="text" placeholder="saisir votre prénom" pattern="[a-zA-Z]{2,25}" required/><br>
+
+                        <label for="name">Nom* :</label><br>
+                        <input id="name" type="text" placeholder="saisir votre nom" pattern="[a-zA-Z]{2,25}" required/><br>
+
+                        <label for="">Date et Lieu de Naissance* :</label><br>
+                        <input id="name" type="date" name="naissane" required/> À : <input id="name" type="text" placeholder="saisir lieu de naissane" pattern="[a-zA-Z]{2,25}" required><br>
+
+                        <label for="name">Email* :</label><br>
+                        <input id="name" type="email" placeholder="saisir votre email" required/><br>
+
+                    </fieldset><br>
+
+                    <br><fieldset>
+                        <legend><strong>Coordonnées</strong></legend>
+
+                        <label for="phone">Téléphone* :</label><br>
+                        <input id="phone" type="" name="phone" pattern="[0-9]{6,26}" required /><br>
+
+                        <label for="ad">Adresse postale</label><br>
+                        <input id="name" type="text" placeholder="saisir votre adresse postal" pattern="[a-zA-Z]{2,25}" required/><br>
+
+                        <label for="motDePasse1">Mot de passe* :</label><br>
+                        <input id="motDePasse1" type="password" placeholder="Veuillez saisir au moins 8 caractères" pattern="[a-zA-Z0-9]{8,25}" required/>
+                        <span>(veuillez entrer au minimun 8 caractères)</span><br>
+
+                        <label for="motDePasse2">Confirmer mot de passe* :</label><br>
+                        <input id="motDePasse2" type="password" placeholder="saisir votre mot de passe" pattern="[a-zA-Z0-9]{8,25}" required/>
+                        <span>(veuillez entrer au minimun 8 caractères)</span><br>
+
+                    </fieldset><br>
+
+                    <!--L'exercice demande de ne pas utiliser le bouton soumettre.-->
+                    <br><button id="Click"><strong>Vérifier et envoyer</strong></button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+<!--Script permettant d'afficher les identificants téléphoniques avec drapeu-->
+<script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+</script>
+
+
+</html>

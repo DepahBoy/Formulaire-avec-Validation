@@ -1,0 +1,80 @@
+/* Stylisation du logo*/
+img{
+   margin: 15px;
+   padding: 15px;
+   width: 70px;
+   height: 70px;
+}
+
+h6{
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    color: red;
+}
+body{
+    background-color: rgb(244, 239, 244);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+
+/* Cette Id (phone) permet de styler l'entré du numéro*/
+#phone {
+    padding-top: 12px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    margin-left: 5px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+/*les espaces d'entrés sont identifiants ci-dessous*/
+#name, #prenom, #motDePasse1, #motDePasse2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 4px;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+#Click{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 4px;
+    margin-left: 5px;
+    border-radius: 5px;
+    background-color: rgb(27, 132, 36);
+    opacity: inherit;
+    color: #ffffff;
+    margin-left: 900px;
+}
+#Statut {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 4px;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+.container {
+    max-width: 1200px;
+    padding: 100px;
+    margin: 100px;
+}
+
+span{
+    font-size: 14px;
+    color: red;
+}
+
+/*Stylisation de la page de validation du formulaire*/
+.valid{
+   
+    color: green;
+    margin: 100px;
+    padding: 100px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-left: 350px;
+    margin-left: 200px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
