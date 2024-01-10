@@ -1,2 +1,3 @@
 # Formulaire-avec-Validation
-Formulaire HTML, CSS et JavaScript avec validation. lien ici : https://jeremy-javadev.github.io/Formulaire-avec-Validation/
+Formulaire HTML, CSS et JavaScript avec validation.
+Voir ici : https://fullstack-techboy.github.io/Formulaire-avec-Validation/
